@@ -1,5 +1,6 @@
 const path = require('path');
 const nodeExternals = require('webpack-node-externals');
+const WebpackShellPlugin = require('webpack-shell-plugin');
 
 const { NODE_ENV } = process.env;
 
@@ -17,6 +18,11 @@ module.exports = {
   resolve: {
     extensions: ['.ts', '.js'],
   },
+  plugins: [
+    new WebpackShellPlugin({
+      onBuildEnd: ['yarn nodemon'],
+    }),
+  ],
   module: {
     rules: [
       {

@@ -1,7 +1,8 @@
 {
   "name": "budgie-backend",
   "scripts": {
-    "start": "NODE_ENV=development nodemon src/index.ts"
+    "start": "NODE_ENV=development webpack",
+    "nodemon": "NODE_ENV=development nodemon build/index.js"
   },
   "dependencies": {
     "express": "^4.17.1",
@@ -13,10 +14,9 @@
     "dotenv-safe": "^8.1.0",
     "nodemon": "^1.19.4",
     "ts-loader": "^6.2.1",
-    "ts-node": "^8.4.1",
     "typescript": "^3.6.4",
-    "webpack-dev-middleware": "^3.7.2",
-    "webpack-node-externals": "^1.7.2"
+    "webpack-node-externals": "^1.7.2",
+    "webpack-shell-plugin": "^0.5.0"
   },
   "version": "0.0.0",
   "repository": "git@github.com:mrseanbaines/budgie-backend.git",
