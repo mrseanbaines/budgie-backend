@@ -1,0 +1,26 @@
+{
+  "name": "budgie-backend",
+  "scripts": {
+    "start": "NODE_ENV=development nodemon src/index.ts"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.2",
+    "dotenv-safe": "^8.1.0",
+    "nodemon": "^1.19.4",
+    "ts-loader": "^6.2.1",
+    "ts-node": "^8.4.1",
+    "typescript": "^3.6.4",
+    "webpack-dev-middleware": "^3.7.2",
+    "webpack-node-externals": "^1.7.2"
+  },
+  "version": "0.0.0",
+  "repository": "git@github.com:mrseanbaines/budgie-backend.git",
+  "author": "Sean Baines <mrseanbaines@gmail.com>",
+  "license": "MIT",
+  "private": true
+}

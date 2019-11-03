@@ -1,0 +1,12 @@
+# Build directory
+build/
+
+# Dependency directories
+node_modules/
+
+# Dotenv environment variables file
+.env*
+!.env.example
+
+# System files
+.DS_Store
