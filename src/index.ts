@@ -11,5 +11,6 @@ const { PORT } = process.env;
 app.use('/foo', routes.foo);
 
 app.listen(PORT, () => {
+  // eslint-disable-next-line no-console
   console.log(`🚀 Your app is available at http://localhost:${PORT}`);
 });
