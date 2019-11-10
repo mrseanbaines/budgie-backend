@@ -20,5 +20,9 @@
         "extensions": [".js", ".ts"]
       }
     }
+  },
+  "rules": {
+    "no-console": ["error", { "allow": ["error"] }],
+    "object-curly-newline": "off"
   }
 }
