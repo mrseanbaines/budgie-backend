@@ -1,9 +1,9 @@
-const path = require('path');
-const nodeExternals = require('webpack-node-externals');
-const WebpackShellPlugin = require('webpack-shell-plugin');
-const CleanTerminalPlugin = require('clean-terminal-webpack-plugin');
+const path = require('path')
+const nodeExternals = require('webpack-node-externals')
+const WebpackShellPlugin = require('webpack-shell-plugin')
+const CleanTerminalPlugin = require('clean-terminal-webpack-plugin')
 
-const { NODE_ENV } = process.env;
+const { NODE_ENV } = process.env
 
 module.exports = {
   entry: path.resolve(__dirname, 'src', 'index.ts'),
@@ -35,4 +35,4 @@ module.exports = {
       },
     ],
   },
-};
+}

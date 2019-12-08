@@ -3,7 +3,7 @@
     "es6": true,
     "node": true
   },
-  "extends": ["airbnb-base"],
+  "extends": ["airbnb-base", "prettier"],
   "globals": {
     "Atomics": "readonly",
     "SharedArrayBuffer": "readonly"
@@ -23,6 +23,15 @@
   },
   "rules": {
     "no-console": ["error", { "allow": ["error"] }],
-    "object-curly-newline": "off"
-  }
+    "object-curly-newline": "off",
+    "arrow-parens": ["error", "as-needed"]
+  },
+  "overrides": [
+    {
+      "files": ["*.ts", "*.tsx"],
+      "rules": {
+        "@typescript-eslint/no-unused-vars": ["error", { "args": "none" }]
+      }
+    }
+  ]
 }
