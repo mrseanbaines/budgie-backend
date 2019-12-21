@@ -6,7 +6,7 @@
     "notes": "",
     "merchant": { "name": "Flashdog" },
     "counterparty": {},
-    "category": "Outdoors",
+    "category": null,
     "include_in_spending": true,
     "is_load": false
   },
@@ -17,7 +17,7 @@
     "notes": "",
     "merchant": { "name": "Skipstorm" },
     "counterparty": {},
-    "category": "Automotive",
+    "category": null,
     "include_in_spending": true,
     "is_load": false
   },
@@ -28,7 +28,7 @@
     "notes": "",
     "merchant": { "name": "Topiclounge" },
     "counterparty": {},
-    "category": "Jewelery",
+    "category": null,
     "include_in_spending": true,
     "is_load": false
   },
@@ -39,7 +39,7 @@
     "notes": "",
     "merchant": { "name": "Feedfish" },
     "counterparty": {},
-    "category": "Clothing",
+    "category": null,
     "include_in_spending": true,
     "is_load": false
   },
@@ -50,7 +50,7 @@
     "notes": "",
     "merchant": { "name": "Gabspot" },
     "counterparty": {},
-    "category": "Sports",
+    "category": null,
     "include_in_spending": true,
     "is_load": false
   },
@@ -61,7 +61,7 @@
     "notes": "",
     "merchant": { "name": "Quaxo" },
     "counterparty": {},
-    "category": "Baby",
+    "category": null,
     "include_in_spending": true,
     "is_load": false
   },
@@ -72,7 +72,7 @@
     "notes": "enim leo",
     "merchant": { "name": "Kazio" },
     "counterparty": {},
-    "category": "Games",
+    "category": null,
     "include_in_spending": true,
     "is_load": false
   },
@@ -83,7 +83,7 @@
     "notes": "",
     "merchant": { "name": "Skynoodle" },
     "counterparty": {},
-    "category": "Automotive",
+    "category": null,
     "include_in_spending": true,
     "is_load": false
   },
@@ -94,7 +94,7 @@
     "notes": "cubilia",
     "merchant": { "name": "Linktype" },
     "counterparty": {},
-    "category": "Computers",
+    "category": null,
     "include_in_spending": true,
     "is_load": false
   },
@@ -105,7 +105,7 @@
     "notes": "in purus eu magna vulputate",
     "merchant": { "name": "Yotz" },
     "counterparty": {},
-    "category": "Sports",
+    "category": null,
     "include_in_spending": true,
     "is_load": false
   },
@@ -116,7 +116,7 @@
     "notes": "in",
     "merchant": { "name": "Trupe" },
     "counterparty": {},
-    "category": "Computers",
+    "category": null,
     "include_in_spending": true,
     "is_load": false
   },
@@ -127,7 +127,7 @@
     "notes": "",
     "merchant": { "name": "Babbleblab" },
     "counterparty": {},
-    "category": "Computers",
+    "category": null,
     "include_in_spending": true,
     "is_load": false
   },
@@ -138,7 +138,7 @@
     "notes": "eros",
     "merchant": { "name": "Riffwire" },
     "counterparty": {},
-    "category": "Beauty",
+    "category": null,
     "include_in_spending": true,
     "is_load": false
   },
@@ -149,7 +149,7 @@
     "notes": "",
     "merchant": { "name": "Avavee" },
     "counterparty": {},
-    "category": "Sports",
+    "category": null,
     "include_in_spending": true,
     "is_load": false
   },
@@ -160,7 +160,7 @@
     "notes": "",
     "merchant": { "name": "Lajo" },
     "counterparty": {},
-    "category": "Grocery",
+    "category": null,
     "include_in_spending": true,
     "is_load": false
   },
@@ -171,7 +171,7 @@
     "notes": "",
     "merchant": { "name": "Aivee" },
     "counterparty": {},
-    "category": "Kids",
+    "category": null,
     "include_in_spending": true,
     "is_load": false
   },
@@ -182,7 +182,7 @@
     "notes": "",
     "merchant": { "name": "Youopia" },
     "counterparty": {},
-    "category": "Kids",
+    "category": null,
     "include_in_spending": true,
     "is_load": false
   },
@@ -193,7 +193,7 @@
     "notes": "eget orci vehicula condimentum curabitur",
     "merchant": { "name": "Mynte" },
     "counterparty": {},
-    "category": "Tools",
+    "category": null,
     "include_in_spending": true,
     "is_load": false
   },
@@ -204,7 +204,7 @@
     "notes": "",
     "merchant": { "name": "Talane" },
     "counterparty": {},
-    "category": "Baby",
+    "category": null,
     "include_in_spending": true,
     "is_load": false
   },
@@ -215,7 +215,7 @@
     "notes": "non interdum in",
     "merchant": { "name": "Trilia" },
     "counterparty": {},
-    "category": "Toys",
+    "category": null,
     "include_in_spending": true,
     "is_load": false
   },
@@ -226,7 +226,7 @@
     "notes": "curae duis faucibus accumsan odio",
     "merchant": { "name": "Npath" },
     "counterparty": {},
-    "category": "Tools",
+    "category": null,
     "include_in_spending": true,
     "is_load": false
   },
@@ -237,7 +237,7 @@
     "notes": "",
     "merchant": { "name": "Zoombeat" },
     "counterparty": {},
-    "category": "Jewelery",
+    "category": null,
     "include_in_spending": true,
     "is_load": false
   },
@@ -248,7 +248,7 @@
     "notes": "",
     "merchant": { "name": "Brainsphere" },
     "counterparty": {},
-    "category": "Automotive",
+    "category": null,
     "include_in_spending": true,
     "is_load": false
   },
@@ -259,7 +259,7 @@
     "notes": "",
     "merchant": { "name": "Cogilith" },
     "counterparty": {},
-    "category": "Clothing",
+    "category": null,
     "include_in_spending": true,
     "is_load": false
   },
@@ -270,7 +270,7 @@
     "notes": "",
     "merchant": { "name": "Trilia" },
     "counterparty": {},
-    "category": "Kids",
+    "category": null,
     "include_in_spending": true,
     "is_load": false
   },
@@ -281,7 +281,7 @@
     "notes": "",
     "merchant": { "name": "Zoombox" },
     "counterparty": {},
-    "category": "Outdoors",
+    "category": null,
     "include_in_spending": true,
     "is_load": false
   },
@@ -292,7 +292,7 @@
     "notes": "",
     "merchant": { "name": "Yodoo" },
     "counterparty": {},
-    "category": "Kids",
+    "category": null,
     "include_in_spending": true,
     "is_load": false
   },
@@ -303,7 +303,7 @@
     "notes": "",
     "merchant": { "name": "Podcat" },
     "counterparty": {},
-    "category": "Toys",
+    "category": null,
     "include_in_spending": true,
     "is_load": false
   },
@@ -314,7 +314,7 @@
     "notes": "",
     "merchant": { "name": "Yombu" },
     "counterparty": {},
-    "category": "Tools",
+    "category": null,
     "include_in_spending": true,
     "is_load": false
   },
@@ -325,7 +325,7 @@
     "notes": "",
     "merchant": { "name": "Voolia" },
     "counterparty": {},
-    "category": "Automotive",
+    "category": null,
     "include_in_spending": true,
     "is_load": false
   },
@@ -336,7 +336,7 @@
     "notes": "",
     "merchant": { "name": "Eazzy" },
     "counterparty": {},
-    "category": "Clothing",
+    "category": null,
     "include_in_spending": true,
     "is_load": false
   },
@@ -347,7 +347,7 @@
     "notes": "",
     "merchant": { "name": "Skimia" },
     "counterparty": {},
-    "category": "Sports",
+    "category": null,
     "include_in_spending": true,
     "is_load": false
   },
@@ -358,7 +358,7 @@
     "notes": "",
     "merchant": { "name": "Mydo" },
     "counterparty": {},
-    "category": "Garden",
+    "category": null,
     "include_in_spending": true,
     "is_load": false
   },
@@ -369,7 +369,7 @@
     "notes": "pellentesque",
     "merchant": { "name": "Realmix" },
     "counterparty": {},
-    "category": "Computers",
+    "category": null,
     "include_in_spending": true,
     "is_load": false
   },
@@ -380,7 +380,7 @@
     "notes": "",
     "merchant": { "name": "Latz" },
     "counterparty": {},
-    "category": "Garden",
+    "category": null,
     "include_in_spending": true,
     "is_load": false
   },
@@ -391,7 +391,7 @@
     "notes": "proin leo odio",
     "merchant": { "name": "Quire" },
     "counterparty": {},
-    "category": "Electronics",
+    "category": null,
     "include_in_spending": true,
     "is_load": false
   },
@@ -402,7 +402,7 @@
     "notes": "",
     "merchant": { "name": "Demivee" },
     "counterparty": {},
-    "category": "Electronics",
+    "category": null,
     "include_in_spending": true,
     "is_load": false
   },
@@ -413,7 +413,7 @@
     "notes": "",
     "merchant": { "name": "Linkbridge" },
     "counterparty": {},
-    "category": "Outdoors",
+    "category": null,
     "include_in_spending": true,
     "is_load": false
   },
@@ -424,7 +424,7 @@
     "notes": "",
     "merchant": { "name": "Jamia" },
     "counterparty": {},
-    "category": "Kids",
+    "category": null,
     "include_in_spending": true,
     "is_load": false
   },
@@ -435,7 +435,7 @@
     "notes": "",
     "merchant": { "name": "Fivebridge" },
     "counterparty": {},
-    "category": "Electronics",
+    "category": null,
     "include_in_spending": true,
     "is_load": false
   },
@@ -446,7 +446,7 @@
     "notes": "",
     "merchant": { "name": "Divavu" },
     "counterparty": {},
-    "category": "Industrial",
+    "category": null,
     "include_in_spending": true,
     "is_load": false
   },
@@ -457,7 +457,7 @@
     "notes": "",
     "merchant": { "name": "Topiclounge" },
     "counterparty": {},
-    "category": "Electronics",
+    "category": null,
     "include_in_spending": true,
     "is_load": false
   },
@@ -468,7 +468,7 @@
     "notes": "",
     "merchant": { "name": "Mynte" },
     "counterparty": {},
-    "category": "Clothing",
+    "category": null,
     "include_in_spending": true,
     "is_load": false
   },
@@ -479,7 +479,7 @@
     "notes": "",
     "merchant": { "name": "Lajo" },
     "counterparty": {},
-    "category": "Outdoors",
+    "category": null,
     "include_in_spending": true,
     "is_load": false
   },
@@ -490,7 +490,7 @@
     "notes": "",
     "merchant": { "name": "Riffpath" },
     "counterparty": {},
-    "category": "Industrial",
+    "category": null,
     "include_in_spending": true,
     "is_load": false
   },
@@ -501,7 +501,7 @@
     "notes": "",
     "merchant": { "name": "Dynabox" },
     "counterparty": {},
-    "category": "Electronics",
+    "category": null,
     "include_in_spending": true,
     "is_load": false
   },
@@ -512,7 +512,7 @@
     "notes": "",
     "merchant": { "name": "Voonix" },
     "counterparty": {},
-    "category": "Grocery",
+    "category": null,
     "include_in_spending": true,
     "is_load": false
   },
@@ -523,7 +523,7 @@
     "notes": "",
     "merchant": { "name": "Kamba" },
     "counterparty": {},
-    "category": "Beauty",
+    "category": null,
     "include_in_spending": true,
     "is_load": false
   },
@@ -534,7 +534,7 @@
     "notes": "sapien placerat",
     "merchant": { "name": "Photofeed" },
     "counterparty": {},
-    "category": "Beauty",
+    "category": null,
     "include_in_spending": true,
     "is_load": false
   },
@@ -545,7 +545,7 @@
     "notes": "",
     "merchant": { "name": "Tekfly" },
     "counterparty": {},
-    "category": "Health",
+    "category": null,
     "include_in_spending": true,
     "is_load": false
   },
@@ -556,7 +556,7 @@
     "notes": "",
     "merchant": { "name": "Youspan" },
     "counterparty": {},
-    "category": "Music",
+    "category": null,
     "include_in_spending": true,
     "is_load": false
   },
@@ -567,7 +567,7 @@
     "notes": "",
     "merchant": { "name": "Twimm" },
     "counterparty": {},
-    "category": "Outdoors",
+    "category": null,
     "include_in_spending": true,
     "is_load": false
   },
@@ -578,7 +578,7 @@
     "notes": "",
     "merchant": { "name": "Rhybox" },
     "counterparty": {},
-    "category": "Garden",
+    "category": null,
     "include_in_spending": true,
     "is_load": false
   },
@@ -589,7 +589,7 @@
     "notes": "nullam",
     "merchant": { "name": "Brainbox" },
     "counterparty": {},
-    "category": "Kids",
+    "category": null,
     "include_in_spending": true,
     "is_load": false
   },
@@ -600,7 +600,7 @@
     "notes": "",
     "merchant": { "name": "Jaxspan" },
     "counterparty": {},
-    "category": "Kids",
+    "category": null,
     "include_in_spending": true,
     "is_load": false
   },
@@ -611,7 +611,7 @@
     "notes": "",
     "merchant": { "name": "Cogibox" },
     "counterparty": {},
-    "category": "Games",
+    "category": null,
     "include_in_spending": true,
     "is_load": false
   },
@@ -622,7 +622,7 @@
     "notes": "",
     "merchant": { "name": "Camimbo" },
     "counterparty": {},
-    "category": "Games",
+    "category": null,
     "include_in_spending": true,
     "is_load": false
   },
@@ -633,7 +633,7 @@
     "notes": "",
     "merchant": { "name": "Flipstorm" },
     "counterparty": {},
-    "category": "Electronics",
+    "category": null,
     "include_in_spending": true,
     "is_load": false
   },
@@ -644,7 +644,7 @@
     "notes": "",
     "merchant": { "name": "Yodel" },
     "counterparty": {},
-    "category": "Health",
+    "category": null,
     "include_in_spending": true,
     "is_load": false
   },
@@ -655,7 +655,7 @@
     "notes": "",
     "merchant": { "name": "Brainverse" },
     "counterparty": {},
-    "category": "Outdoors",
+    "category": null,
     "include_in_spending": true,
     "is_load": false
   },
@@ -666,7 +666,7 @@
     "notes": "",
     "merchant": { "name": "Ooba" },
     "counterparty": {},
-    "category": "Tools",
+    "category": null,
     "include_in_spending": true,
     "is_load": false
   },
@@ -677,7 +677,7 @@
     "notes": "",
     "merchant": { "name": "Jaloo" },
     "counterparty": {},
-    "category": "Baby",
+    "category": null,
     "include_in_spending": true,
     "is_load": false
   },
@@ -688,7 +688,7 @@
     "notes": "",
     "merchant": { "name": "Gabtune" },
     "counterparty": {},
-    "category": "Industrial",
+    "category": null,
     "include_in_spending": true,
     "is_load": false
   },
@@ -699,7 +699,7 @@
     "notes": "",
     "merchant": { "name": "Mydo" },
     "counterparty": {},
-    "category": "Music",
+    "category": null,
     "include_in_spending": true,
     "is_load": false
   },
@@ -710,7 +710,7 @@
     "notes": "",
     "merchant": { "name": "Centizu" },
     "counterparty": {},
-    "category": "Garden",
+    "category": null,
     "include_in_spending": true,
     "is_load": false
   },
@@ -721,7 +721,7 @@
     "notes": "",
     "merchant": { "name": "Jaloo" },
     "counterparty": {},
-    "category": "Garden",
+    "category": null,
     "include_in_spending": true,
     "is_load": false
   },
@@ -732,7 +732,7 @@
     "notes": "",
     "merchant": { "name": "Photojam" },
     "counterparty": {},
-    "category": "Automotive",
+    "category": null,
     "include_in_spending": true,
     "is_load": false
   },
@@ -743,7 +743,7 @@
     "notes": "",
     "merchant": { "name": "Rhyzio" },
     "counterparty": {},
-    "category": "Games",
+    "category": null,
     "include_in_spending": true,
     "is_load": false
   },
@@ -754,7 +754,7 @@
     "notes": "",
     "merchant": { "name": "Babbleblab" },
     "counterparty": {},
-    "category": "Health",
+    "category": null,
     "include_in_spending": true,
     "is_load": false
   },
@@ -765,7 +765,7 @@
     "notes": "",
     "merchant": { "name": "Thoughtsphere" },
     "counterparty": {},
-    "category": "Electronics",
+    "category": null,
     "include_in_spending": true,
     "is_load": false
   },
@@ -776,7 +776,7 @@
     "notes": "",
     "merchant": { "name": "Meemm" },
     "counterparty": {},
-    "category": "Computers",
+    "category": null,
     "include_in_spending": true,
     "is_load": false
   },
@@ -787,7 +787,7 @@
     "notes": "",
     "merchant": { "name": "Livepath" },
     "counterparty": {},
-    "category": "Clothing",
+    "category": null,
     "include_in_spending": true,
     "is_load": false
   },
@@ -798,7 +798,7 @@
     "notes": "",
     "merchant": { "name": "Realfire" },
     "counterparty": {},
-    "category": "Movies",
+    "category": null,
     "include_in_spending": true,
     "is_load": false
   },
@@ -809,7 +809,7 @@
     "notes": "sed magna at",
     "merchant": { "name": "Leexo" },
     "counterparty": {},
-    "category": "Grocery",
+    "category": null,
     "include_in_spending": true,
     "is_load": false
   },
@@ -820,7 +820,7 @@
     "notes": "",
     "merchant": { "name": "Quinu" },
     "counterparty": {},
-    "category": "Grocery",
+    "category": null,
     "include_in_spending": true,
     "is_load": false
   },
@@ -831,7 +831,7 @@
     "notes": "",
     "merchant": { "name": "Flashpoint" },
     "counterparty": {},
-    "category": "Tools",
+    "category": null,
     "include_in_spending": true,
     "is_load": false
   },
@@ -842,7 +842,7 @@
     "notes": "",
     "merchant": { "name": "Fivespan" },
     "counterparty": {},
-    "category": "Jewelery",
+    "category": null,
     "include_in_spending": true,
     "is_load": false
   },
@@ -853,7 +853,7 @@
     "notes": "",
     "merchant": { "name": "Edgeify" },
     "counterparty": {},
-    "category": "Jewelery",
+    "category": null,
     "include_in_spending": true,
     "is_load": false
   },
@@ -864,7 +864,7 @@
     "notes": "faucibus orci luctus",
     "merchant": { "name": "Eazzy" },
     "counterparty": {},
-    "category": "Garden",
+    "category": null,
     "include_in_spending": true,
     "is_load": false
   },
@@ -875,7 +875,7 @@
     "notes": "",
     "merchant": { "name": "Quinu" },
     "counterparty": {},
-    "category": "Sports",
+    "category": null,
     "include_in_spending": true,
     "is_load": false
   },
@@ -886,7 +886,7 @@
     "notes": "",
     "merchant": { "name": "Skidoo" },
     "counterparty": {},
-    "category": "Books",
+    "category": null,
     "include_in_spending": true,
     "is_load": false
   },
@@ -897,7 +897,7 @@
     "notes": "",
     "merchant": { "name": "Ainyx" },
     "counterparty": {},
-    "category": "Sports",
+    "category": null,
     "include_in_spending": true,
     "is_load": false
   },
@@ -908,7 +908,7 @@
     "notes": "",
     "merchant": { "name": "Kazu" },
     "counterparty": {},
-    "category": "Shoes",
+    "category": null,
     "include_in_spending": true,
     "is_load": false
   },
@@ -919,7 +919,7 @@
     "notes": "tristique est et tempus semper",
     "merchant": { "name": "Tagchat" },
     "counterparty": {},
-    "category": "Toys",
+    "category": null,
     "include_in_spending": true,
     "is_load": false
   },
@@ -930,7 +930,7 @@
     "notes": "",
     "merchant": { "name": "Midel" },
     "counterparty": {},
-    "category": "Home",
+    "category": null,
     "include_in_spending": true,
     "is_load": false
   },
@@ -941,7 +941,7 @@
     "notes": "",
     "merchant": { "name": "Devshare" },
     "counterparty": {},
-    "category": "Home",
+    "category": null,
     "include_in_spending": true,
     "is_load": false
   },
@@ -952,7 +952,7 @@
     "notes": "",
     "merchant": { "name": "Trudeo" },
     "counterparty": {},
-    "category": "Baby",
+    "category": null,
     "include_in_spending": true,
     "is_load": false
   },
@@ -963,7 +963,7 @@
     "notes": "",
     "merchant": { "name": "Dynabox" },
     "counterparty": {},
-    "category": "Tools",
+    "category": null,
     "include_in_spending": true,
     "is_load": false
   },
@@ -974,7 +974,7 @@
     "notes": "",
     "merchant": { "name": "Skynoodle" },
     "counterparty": {},
-    "category": "Toys",
+    "category": null,
     "include_in_spending": true,
     "is_load": false
   },
@@ -985,7 +985,7 @@
     "notes": "",
     "merchant": { "name": "Rhyloo" },
     "counterparty": {},
-    "category": "Tools",
+    "category": null,
     "include_in_spending": true,
     "is_load": false
   },
@@ -996,7 +996,7 @@
     "notes": "",
     "merchant": { "name": "Devify" },
     "counterparty": {},
-    "category": "Kids",
+    "category": null,
     "include_in_spending": true,
     "is_load": false
   },
@@ -1007,7 +1007,7 @@
     "notes": "eros viverra eget congue eget",
     "merchant": { "name": "Bluezoom" },
     "counterparty": {},
-    "category": "Movies",
+    "category": null,
     "include_in_spending": true,
     "is_load": false
   },
@@ -1018,7 +1018,7 @@
     "notes": "",
     "merchant": { "name": "Jaxworks" },
     "counterparty": {},
-    "category": "Automotive",
+    "category": null,
     "include_in_spending": true,
     "is_load": false
   },
@@ -1029,7 +1029,7 @@
     "notes": "sed vestibulum sit amet",
     "merchant": { "name": "Twitterwire" },
     "counterparty": {},
-    "category": "Baby",
+    "category": null,
     "include_in_spending": true,
     "is_load": false
   },
@@ -1040,7 +1040,7 @@
     "notes": "enim blandit mi",
     "merchant": { "name": "Ntags" },
     "counterparty": {},
-    "category": "Sports",
+    "category": null,
     "include_in_spending": true,
     "is_load": false
   },
@@ -1051,7 +1051,7 @@
     "notes": "",
     "merchant": { "name": "Dynava" },
     "counterparty": {},
-    "category": "Outdoors",
+    "category": null,
     "include_in_spending": true,
     "is_load": false
   },
@@ -1062,7 +1062,7 @@
     "notes": "",
     "merchant": { "name": "Kwilith" },
     "counterparty": {},
-    "category": "Music",
+    "category": null,
     "include_in_spending": true,
     "is_load": false
   },
@@ -1073,7 +1073,7 @@
     "notes": "",
     "merchant": { "name": "Kazio" },
     "counterparty": {},
-    "category": "Grocery",
+    "category": null,
     "include_in_spending": true,
     "is_load": false
   },
@@ -1084,7 +1084,7 @@
     "notes": "",
     "merchant": { "name": "Jatri" },
     "counterparty": {},
-    "category": "Movies",
+    "category": null,
     "include_in_spending": true,
     "is_load": false
   },
@@ -1095,7 +1095,7 @@
     "notes": "",
     "merchant": { "name": "Oyoba" },
     "counterparty": {},
-    "category": "Grocery",
+    "category": null,
     "include_in_spending": true,
     "is_load": false
   },
@@ -1106,7 +1106,7 @@
     "notes": "",
     "merchant": { "name": "Avaveo" },
     "counterparty": {},
-    "category": "Clothing",
+    "category": null,
     "include_in_spending": true,
     "is_load": false
   },
@@ -1117,7 +1117,7 @@
     "notes": "",
     "merchant": { "name": "Tagtune" },
     "counterparty": {},
-    "category": "Clothing",
+    "category": null,
     "include_in_spending": true,
     "is_load": false
   },
@@ -1128,7 +1128,7 @@
     "notes": "pede justo lacinia eget",
     "merchant": { "name": "Twimbo" },
     "counterparty": {},
-    "category": "Grocery",
+    "category": null,
     "include_in_spending": true,
     "is_load": false
   },
@@ -1139,7 +1139,7 @@
     "notes": "vehicula",
     "merchant": { "name": "Trupe" },
     "counterparty": {},
-    "category": "Kids",
+    "category": null,
     "include_in_spending": true,
     "is_load": false
   },
@@ -1150,7 +1150,7 @@
     "notes": "",
     "merchant": { "name": "Twitterlist" },
     "counterparty": {},
-    "category": "Toys",
+    "category": null,
     "include_in_spending": true,
     "is_load": false
   },
@@ -1161,7 +1161,7 @@
     "notes": "",
     "merchant": { "name": "Tanoodle" },
     "counterparty": {},
-    "category": "Kids",
+    "category": null,
     "include_in_spending": true,
     "is_load": false
   },
@@ -1172,7 +1172,7 @@
     "notes": "",
     "merchant": { "name": "Ailane" },
     "counterparty": {},
-    "category": "Tools",
+    "category": null,
     "include_in_spending": true,
     "is_load": false
   },
@@ -1183,7 +1183,7 @@
     "notes": "",
     "merchant": { "name": "Oyoyo" },
     "counterparty": {},
-    "category": "Grocery",
+    "category": null,
     "include_in_spending": true,
     "is_load": false
   },
@@ -1194,7 +1194,7 @@
     "notes": "",
     "merchant": { "name": "Kare" },
     "counterparty": {},
-    "category": "Electronics",
+    "category": null,
     "include_in_spending": true,
     "is_load": false
   },
@@ -1205,7 +1205,7 @@
     "notes": "",
     "merchant": { "name": "Mydo" },
     "counterparty": {},
-    "category": "Movies",
+    "category": null,
     "include_in_spending": true,
     "is_load": false
   },
@@ -1216,7 +1216,7 @@
     "notes": "",
     "merchant": { "name": "Jabberbean" },
     "counterparty": {},
-    "category": "Industrial",
+    "category": null,
     "include_in_spending": true,
     "is_load": false
   },
@@ -1227,7 +1227,7 @@
     "notes": "",
     "merchant": { "name": "Yacero" },
     "counterparty": {},
-    "category": "Sports",
+    "category": null,
     "include_in_spending": true,
     "is_load": false
   },
@@ -1238,7 +1238,7 @@
     "notes": "",
     "merchant": { "name": "Gevee" },
     "counterparty": {},
-    "category": "Automotive",
+    "category": null,
     "include_in_spending": true,
     "is_load": false
   },
@@ -1249,7 +1249,7 @@
     "notes": "",
     "merchant": { "name": "Buzzdog" },
     "counterparty": {},
-    "category": "Grocery",
+    "category": null,
     "include_in_spending": true,
     "is_load": false
   },
@@ -1260,7 +1260,7 @@
     "notes": "duis at",
     "merchant": { "name": "Mydeo" },
     "counterparty": {},
-    "category": "Kids",
+    "category": null,
     "include_in_spending": true,
     "is_load": false
   },
@@ -1271,7 +1271,7 @@
     "notes": "",
     "merchant": { "name": "Rhyloo" },
     "counterparty": {},
-    "category": "Electronics",
+    "category": null,
     "include_in_spending": true,
     "is_load": false
   },
@@ -1282,7 +1282,7 @@
     "notes": "",
     "merchant": { "name": "Eazzy" },
     "counterparty": {},
-    "category": "Kids",
+    "category": null,
     "include_in_spending": true,
     "is_load": false
   },
@@ -1293,7 +1293,7 @@
     "notes": "",
     "merchant": { "name": "Meezzy" },
     "counterparty": {},
-    "category": "Garden",
+    "category": null,
     "include_in_spending": true,
     "is_load": false
   },
@@ -1304,7 +1304,7 @@
     "notes": "",
     "merchant": { "name": "Flipstorm" },
     "counterparty": {},
-    "category": "Grocery",
+    "category": null,
     "include_in_spending": true,
     "is_load": false
   },
@@ -1315,7 +1315,7 @@
     "notes": "",
     "merchant": { "name": "Vidoo" },
     "counterparty": {},
-    "category": "Games",
+    "category": null,
     "include_in_spending": true,
     "is_load": false
   },
@@ -1326,7 +1326,7 @@
     "notes": "",
     "merchant": { "name": "Topicshots" },
     "counterparty": {},
-    "category": "Tools",
+    "category": null,
     "include_in_spending": true,
     "is_load": false
   },
@@ -1337,7 +1337,7 @@
     "notes": "et",
     "merchant": { "name": "LiveZ" },
     "counterparty": {},
-    "category": "Jewelery",
+    "category": null,
     "include_in_spending": true,
     "is_load": false
   },
@@ -1348,7 +1348,7 @@
     "notes": "ipsum ac tellus semper interdum",
     "merchant": { "name": "Wikizz" },
     "counterparty": {},
-    "category": "Movies",
+    "category": null,
     "include_in_spending": true,
     "is_load": false
   },
@@ -1359,7 +1359,7 @@
     "notes": "",
     "merchant": { "name": "Avaveo" },
     "counterparty": {},
-    "category": "Movies",
+    "category": null,
     "include_in_spending": true,
     "is_load": false
   },
@@ -1370,7 +1370,7 @@
     "notes": "",
     "merchant": { "name": "Blogpad" },
     "counterparty": {},
-    "category": "Tools",
+    "category": null,
     "include_in_spending": true,
     "is_load": false
   },
@@ -1381,7 +1381,7 @@
     "notes": "",
     "merchant": { "name": "Meetz" },
     "counterparty": {},
-    "category": "Games",
+    "category": null,
     "include_in_spending": true,
     "is_load": false
   },
@@ -1392,7 +1392,7 @@
     "notes": "",
     "merchant": { "name": "Rhynyx" },
     "counterparty": {},
-    "category": "Home",
+    "category": null,
     "include_in_spending": true,
     "is_load": false
   },
@@ -1403,7 +1403,7 @@
     "notes": "",
     "merchant": { "name": "Zoombeat" },
     "counterparty": {},
-    "category": "Games",
+    "category": null,
     "include_in_spending": true,
     "is_load": false
   },
@@ -1414,7 +1414,7 @@
     "notes": "malesuada in imperdiet",
     "merchant": { "name": "Kazio" },
     "counterparty": {},
-    "category": "Grocery",
+    "category": null,
     "include_in_spending": true,
     "is_load": false
   },
@@ -1425,7 +1425,7 @@
     "notes": "",
     "merchant": { "name": "Twitterbeat" },
     "counterparty": {},
-    "category": "Home",
+    "category": null,
     "include_in_spending": true,
     "is_load": false
   },
@@ -1436,7 +1436,7 @@
     "notes": "",
     "merchant": { "name": "Devify" },
     "counterparty": {},
-    "category": "Computers",
+    "category": null,
     "include_in_spending": true,
     "is_load": false
   },
@@ -1447,7 +1447,7 @@
     "notes": "",
     "merchant": { "name": "Cogibox" },
     "counterparty": {},
-    "category": "Sports",
+    "category": null,
     "include_in_spending": true,
     "is_load": false
   },
@@ -1458,7 +1458,7 @@
     "notes": "",
     "merchant": { "name": "Rhynyx" },
     "counterparty": {},
-    "category": "Home",
+    "category": null,
     "include_in_spending": true,
     "is_load": false
   },
@@ -1469,7 +1469,7 @@
     "notes": "",
     "merchant": { "name": "Babbleset" },
     "counterparty": {},
-    "category": "Jewelery",
+    "category": null,
     "include_in_spending": true,
     "is_load": false
   },
@@ -1480,7 +1480,7 @@
     "notes": "",
     "merchant": { "name": "Rhycero" },
     "counterparty": {},
-    "category": "Music",
+    "category": null,
     "include_in_spending": true,
     "is_load": false
   },
@@ -1491,7 +1491,7 @@
     "notes": "",
     "merchant": { "name": "Dazzlesphere" },
     "counterparty": {},
-    "category": "Shoes",
+    "category": null,
     "include_in_spending": true,
     "is_load": false
   },
@@ -1502,7 +1502,7 @@
     "notes": "",
     "merchant": { "name": "Viva" },
     "counterparty": {},
-    "category": "Outdoors",
+    "category": null,
     "include_in_spending": true,
     "is_load": false
   },
@@ -1513,7 +1513,7 @@
     "notes": "",
     "merchant": { "name": "Zoonder" },
     "counterparty": {},
-    "category": "Computers",
+    "category": null,
     "include_in_spending": true,
     "is_load": false
   },
@@ -1524,7 +1524,7 @@
     "notes": "",
     "merchant": { "name": "Mynte" },
     "counterparty": {},
-    "category": "Health",
+    "category": null,
     "include_in_spending": true,
     "is_load": false
   },
@@ -1535,7 +1535,7 @@
     "notes": "",
     "merchant": { "name": "Zoovu" },
     "counterparty": {},
-    "category": "Sports",
+    "category": null,
     "include_in_spending": true,
     "is_load": false
   },
@@ -1546,7 +1546,7 @@
     "notes": "",
     "merchant": { "name": "Fliptune" },
     "counterparty": {},
-    "category": "Movies",
+    "category": null,
     "include_in_spending": true,
     "is_load": false
   },
@@ -1557,7 +1557,7 @@
     "notes": "",
     "merchant": { "name": "Wikizz" },
     "counterparty": {},
-    "category": "Jewelery",
+    "category": null,
     "include_in_spending": true,
     "is_load": false
   },
@@ -1568,7 +1568,7 @@
     "notes": "",
     "merchant": { "name": "Flashspan" },
     "counterparty": {},
-    "category": "Kids",
+    "category": null,
     "include_in_spending": true,
     "is_load": false
   },
@@ -1579,7 +1579,7 @@
     "notes": "",
     "merchant": { "name": "Agimba" },
     "counterparty": {},
-    "category": "Electronics",
+    "category": null,
     "include_in_spending": true,
     "is_load": false
   },
@@ -1590,7 +1590,7 @@
     "notes": "",
     "merchant": { "name": "Skyble" },
     "counterparty": {},
-    "category": "Shoes",
+    "category": null,
     "include_in_spending": true,
     "is_load": false
   },
@@ -1601,7 +1601,7 @@
     "notes": "",
     "merchant": { "name": "Demimbu" },
     "counterparty": {},
-    "category": "Electronics",
+    "category": null,
     "include_in_spending": true,
     "is_load": false
   },
@@ -1612,7 +1612,7 @@
     "notes": "",
     "merchant": { "name": "Eimbee" },
     "counterparty": {},
-    "category": "Books",
+    "category": null,
     "include_in_spending": true,
     "is_load": false
   },
@@ -1623,7 +1623,7 @@
     "notes": "",
     "merchant": { "name": "Skyndu" },
     "counterparty": {},
-    "category": "Kids",
+    "category": null,
     "include_in_spending": true,
     "is_load": false
   },
@@ -1634,7 +1634,7 @@
     "notes": "",
     "merchant": { "name": "Bluejam" },
     "counterparty": {},
-    "category": "Home",
+    "category": null,
     "include_in_spending": true,
     "is_load": false
   },
@@ -1645,7 +1645,7 @@
     "notes": "",
     "merchant": { "name": "Jaxnation" },
     "counterparty": {},
-    "category": "Baby",
+    "category": null,
     "include_in_spending": true,
     "is_load": false
   }

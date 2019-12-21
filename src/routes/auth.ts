@@ -14,10 +14,7 @@ router.get('/token', async (req, res) => {
     code: req.query.code,
   }
 
-  const response = await axios.post(
-    `${MONZO_BASE_URL}/oauth2/token`,
-    stringify(body),
-  )
+  const response = await axios.post(`${MONZO_BASE_URL}/oauth2/token`, stringify(body))
 
   res.status(200).send({ accessToken: response.data.access_token })
 })

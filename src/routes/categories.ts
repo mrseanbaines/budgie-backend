@@ -30,9 +30,7 @@ router.post('/', (req, res) => {
     name: category.name.trim(),
   }
 
-  const existingCategory = categories.find(
-    ({ name }) => name.toUpperCase() === newCategory.name.toUpperCase(),
-  )
+  const existingCategory = categories.find(({ name }) => name.toUpperCase() === newCategory.name.toUpperCase())
 
   if (existingCategory) {
     return res.status(409).send('Category already exists')
@@ -40,9 +38,7 @@ router.post('/', (req, res) => {
 
   categories = [...categories, newCategory]
 
-  return res
-    .status(201)
-    .send({ category: newCategory, total: categories.length })
+  return res.status(201).send({ category: newCategory, total: categories.length })
 })
 
 // Delete Category
@@ -55,9 +51,7 @@ router.delete('/:id', (req, res) => {
 
   categories = categories.filter(category => category !== existingCategory)
 
-  return res
-    .status(200)
-    .send({ category: existingCategory, total: categories.length })
+  return res.status(200).send({ category: existingCategory, total: categories.length })
 })
 
 export default router
