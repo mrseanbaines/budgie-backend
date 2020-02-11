@@ -1,17 +1,40 @@
 import express from 'express'
-import transactions from '../../data/transactions.json'
-import categories from '../../data/categories.json'
+
+import { Category, Transaction } from '../types'
+
+const categories: Category[] = require('../../data/categories.json')
+const transactions: Transaction[] = require('../../data/transactions.json')
 
 const router = express.Router()
 
 // List Transactions
-router.get('/', (req, res) => {
+router.get('/', async (req, res) => {
   const limit = parseInt(req.query.limit, 10) || 25
   const offset = parseInt(req.query.offset, 10) || 0
+  const sort = (req.query.sort || 'desc').toLowerCase()
+  const { before, since } = req.query
+
+  const results = transactions
+    .filter(t => (before ? t.created < before : true))
+    .filter(t => (since ? t.created >= since : true))
+    .sort((a: Transaction, b: Transaction) => {
+      const dateA = Date.parse(a.created)
+      const dateB = Date.parse(b.created)
+
+      switch (sort) {
+        case 'asc': {
+          return dateA - dateB
+        }
+
+        default: {
+          return dateB - dateA
+        }
+      }
+    })
 
   return res.status(200).send({
-    items: transactions.slice(offset, offset + limit),
-    total: transactions.length,
+    items: results.slice(offset, offset + limit),
+    total: results.length,
   })
 })
 

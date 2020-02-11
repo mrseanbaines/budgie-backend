@@ -1,4 +1,25 @@
+/* eslint-disable camelcase */
 export interface Category {
   id: string
   name: string
+}
+
+export interface Merchant {
+  name: string
+}
+
+export interface Counterparty {
+  name: string
+}
+
+export interface Transaction {
+  created: string
+  id: string
+  amount: number
+  notes: string
+  merchant: string | Merchant
+  counterparty: Counterparty
+  category: Category
+  include_in_spending: boolean
+  is_load: boolean
 }
