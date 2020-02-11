@@ -1,8 +1,7 @@
 import express from 'express'
 import uuidv4 from 'uuid/v4'
-import { Category } from '../types'
 
-let categories: Category[] = require('../../data/categories.json')
+import data from '../../data'
 
 const router = express.Router()
 
@@ -12,8 +11,8 @@ router.get('/', (req, res) => {
   const offset = parseInt(req.query.offset, 10) || 0
 
   return res.status(200).send({
-    items: categories.slice(offset, offset + limit),
-    total: categories.length,
+    items: data.categories.slice(offset, offset + limit),
+    total: data.categories.length,
   })
 })
 
@@ -30,28 +29,28 @@ router.post('/', (req, res) => {
     name: category.name.trim(),
   }
 
-  const existingCategory = categories.find(({ name }) => name.toUpperCase() === newCategory.name.toUpperCase())
+  const existingCategory = data.categories.find(({ name }) => name.toUpperCase() === newCategory.name.toUpperCase())
 
   if (existingCategory) {
     return res.status(409).send('Category already exists')
   }
 
-  categories = [...categories, newCategory]
+  data.categories = [...data.categories, newCategory]
 
-  return res.status(201).send({ category: newCategory, total: categories.length })
+  return res.status(201).send({ category: newCategory, total: data.categories.length })
 })
 
 // Delete Category
 router.delete('/:id', (req, res) => {
-  const existingCategory = categories.find(({ id }) => id === req.params.id)
+  const existingCategory = data.categories.find(({ id }) => id === req.params.id)
 
   if (!existingCategory) {
     return res.status(404).send('Category not found')
   }
 
-  categories = categories.filter(category => category !== existingCategory)
+  data.categories = data.categories.filter(category => category !== existingCategory)
 
-  return res.status(200).send({ category: existingCategory, total: categories.length })
+  return res.status(200).send({ category: existingCategory, total: data.categories.length })
 })
 
 export default router

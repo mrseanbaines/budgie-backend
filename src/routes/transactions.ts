@@ -1,9 +1,7 @@
 import express from 'express'
 
-import { Category, Transaction } from '../types'
-
-const categories: Category[] = require('../../data/categories.json')
-const transactions: Transaction[] = require('../../data/transactions.json')
+import { Transaction } from '../types'
+import data from '../../data'
 
 const router = express.Router()
 
@@ -14,7 +12,7 @@ router.get('/', async (req, res) => {
   const sort = (req.query.sort || 'desc').toLowerCase()
   const { before, since } = req.query
 
-  const results = transactions
+  const results = data.transactions
     .filter(t => (before ? t.created < before : true))
     .filter(t => (since ? t.created >= since : true))
     .sort((a: Transaction, b: Transaction) => {
@@ -40,8 +38,8 @@ router.get('/', async (req, res) => {
 
 // Update Transaction
 router.put('/:id', (req, res) => {
-  const transaction = transactions.find(t => t.id === req.params.id)
-  const category = categories.find(c => c.id === req.body.category)
+  const transaction = data.transactions.find(t => t.id === req.params.id)
+  const category = data.categories.find(c => c.id === req.body.category)
 
   if (!transaction) {
     return res.status(404).send('Transaction not found')
