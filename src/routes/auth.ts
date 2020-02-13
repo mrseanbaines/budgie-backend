@@ -43,7 +43,9 @@ router.get('/callback', async (req, res) => {
 
   const response = await axios.post(`${MONZO_BASE_URL}/oauth2/token`, stringify(body))
 
-  return res.redirect(`${SITE_URL}?access_token=${response.data.access_token}`)
+  res.cookie('access_token', response.data.access_token)
+
+  return res.redirect(SITE_URL)
 })
 
 export default router
