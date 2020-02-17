@@ -666,7 +666,7 @@
     "notes": "",
     "merchant": { "name": "Ooba" },
     "counterparty": {},
-    "category": null,
+    "category": "77ebd9ec-7680-4607-b316-64548681cc02",
     "include_in_spending": true,
     "is_load": false
   },
@@ -897,7 +897,7 @@
     "notes": "",
     "merchant": { "name": "Ainyx" },
     "counterparty": {},
-    "category": null,
+    "category": "74bb00ce-2168-4558-934f-919281755877",
     "include_in_spending": true,
     "is_load": false
   },
@@ -985,7 +985,7 @@
     "notes": "",
     "merchant": { "name": "Rhyloo" },
     "counterparty": {},
-    "category": null,
+    "category": "1f9793a7-c5b3-4ab6-855e-a91546d77bce",
     "include_in_spending": true,
     "is_load": false
   },
@@ -1293,7 +1293,7 @@
     "notes": "",
     "merchant": { "name": "Meezzy" },
     "counterparty": {},
-    "category": null,
+    "category": "f3ce11a4-576b-42b5-9f55-b2611cd7205b",
     "include_in_spending": true,
     "is_load": false
   },
