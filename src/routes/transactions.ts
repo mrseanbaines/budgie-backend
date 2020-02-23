@@ -7,8 +7,6 @@ const router = express.Router()
 
 // List Transactions
 router.get('/', async (req, res) => {
-  const limit = parseInt(req.query.limit, 10) || 25
-  const offset = parseInt(req.query.offset, 10) || 0
   const sort = (req.query.sort || 'desc').toLowerCase()
   const { before, since } = req.query
 
@@ -31,7 +29,7 @@ router.get('/', async (req, res) => {
     })
 
   return res.status(200).send({
-    items: results.slice(offset, offset + limit),
+    items: results,
     total: results.length,
   })
 })
