@@ -1,4 +1,5 @@
 import mongoose from 'mongoose'
+import * as types from '../types'
 
 const transactionSchema = new mongoose.Schema(
   {
@@ -17,6 +18,6 @@ const transactionSchema = new mongoose.Schema(
   { minimize: false },
 )
 
-const Transaction = mongoose.model('Transaction', transactionSchema)
+const Transaction = mongoose.model<types.Transaction>('Transaction', transactionSchema)
 
 export default Transaction

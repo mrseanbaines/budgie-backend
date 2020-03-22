@@ -1,5 +1,7 @@
+import mongoose from 'mongoose'
+
 /* eslint-disable camelcase */
-export interface Category {
+export interface Category extends mongoose.Document {
   id: string
   name: string
   color: string
@@ -13,7 +15,7 @@ export interface Counterparty {
   name: string
 }
 
-export interface Transaction {
+export interface Transaction extends mongoose.Document {
   created: string
   id: string
   amount: number

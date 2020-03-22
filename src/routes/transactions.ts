@@ -12,7 +12,9 @@ router.get('/', async (req, res) => {
   const sort = (req.query.sort || 'desc').toLowerCase()
   const { before, since } = req.query
 
-  const results = data.transactions
+  const transactions = await Transaction.find()
+
+  const results = transactions
     .filter(t => (before ? t.created < before : true))
     .filter(t => (since ? t.created >= since : true))
     .sort((a: types.Transaction, b: types.Transaction) => {
