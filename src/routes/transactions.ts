@@ -73,7 +73,11 @@ router.put('/:id', async (req, res) => {
       return res.status(404).send('Category not found')
     }
 
-    const transaction = await Transaction.findByIdAndUpdate(req.params.id, { category: category.id }, { new: true })
+    const transaction = await Transaction.findByIdAndUpdate(
+      req.params.id,
+      { category: req.body.category },
+      { new: true },
+    )
 
     if (!transaction) {
       return res.status(404).send('Transaction not found')
