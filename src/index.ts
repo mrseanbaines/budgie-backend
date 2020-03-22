@@ -9,15 +9,19 @@ const app = express()
 const { PORT, SITE_URL, DATABASE } = process.env
 
 const connectDatabase = async () => {
-  await mongoose.connect(DATABASE, {
-    useNewUrlParser: true,
-    useCreateIndex: true,
-    useFindAndModify: false,
-    useUnifiedTopology: true,
-  })
+  try {
+    await mongoose.connect(DATABASE, {
+      useNewUrlParser: true,
+      useCreateIndex: true,
+      useFindAndModify: false,
+      useUnifiedTopology: true,
+    })
 
-  // eslint-disable-next-line no-console
-  console.log('Database connnection successful!')
+    // eslint-disable-next-line no-console
+    console.log('Database connnection successful!')
+  } catch (err) {
+    console.error(err)
+  }
 }
 
 connectDatabase()
