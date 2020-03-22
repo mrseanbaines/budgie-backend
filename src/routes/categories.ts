@@ -32,6 +32,7 @@ router.post('/', async (req, res) => {
 
     const newCategory = {
       name: category.name.trim(),
+      color: '#778899',
     }
 
     const existingCategory = await Category.findOne({
