@@ -1,5 +1,6 @@
 import express from 'express'
 
+import Transaction from '../models/transaction-model'
 import Category from '../models/category-model'
 
 const router = express.Router()
@@ -59,6 +60,8 @@ router.delete('/:id', async (req, res) => {
     if (!existingCategory) {
       return res.status(404).send('Category not found')
     }
+
+    await Transaction.updateMany({ category: req.params.id }, { category: null })
 
     const categoryCount = await Category.estimatedDocumentCount()
 
