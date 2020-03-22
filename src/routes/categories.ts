@@ -38,10 +38,10 @@ router.post('/', async (req, res) => {
       return res.status(409).send('Category already exists')
     }
 
-    const newCategory = await new Category({
+    const newCategory = await Category.create({
       name: category.name.trim(),
       color: '#778899',
-    }).save()
+    })
 
     const categoryCount = await Category.estimatedDocumentCount()
 

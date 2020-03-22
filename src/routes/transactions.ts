@@ -57,7 +57,7 @@ router.post('/', async (req, res) => {
       return res.status(422).send('No transaction provided')
     }
 
-    const newTransaction = await new Transaction({
+    const newTransaction = await Transaction.create({
       created: transaction.created,
       amount: transaction.amount,
       notes: transaction.notes,
@@ -66,7 +66,7 @@ router.post('/', async (req, res) => {
       category: transaction.category,
       include_in_spending: transaction.include_in_spending,
       is_load: transaction.is_load,
-    }).save()
+    })
 
     const transactionCount = await Transaction.estimatedDocumentCount()
 
