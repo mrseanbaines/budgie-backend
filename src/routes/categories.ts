@@ -6,13 +6,15 @@ import Category from '../models/category-model'
 const router = express.Router()
 
 // List Categories
-router.get('/', (req, res) => {
+router.get('/', async (req, res) => {
   const limit = parseInt(req.query.limit, 10) || 25
   const offset = parseInt(req.query.offset, 10) || 0
 
+  const categories = await Category.find()
+
   return res.status(200).send({
-    items: data.categories.slice(offset, offset + limit),
-    total: data.categories.length,
+    items: categories.slice(offset, offset + limit),
+    total: categories.length,
   })
 })
 
