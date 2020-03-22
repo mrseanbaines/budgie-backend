@@ -30,20 +30,18 @@ router.post('/', async (req, res) => {
       return res.status(422).send('No category provided')
     }
 
-    const newCategory = {
-      name: category.name.trim(),
-      color: '#778899',
-    }
-
     const existingCategory = await Category.findOne({
-      name: { $regex: new RegExp(`^${newCategory.name}$`, 'i') },
+      name: { $regex: new RegExp(`^${category.name.trim()}$`, 'i') },
     })
 
     if (existingCategory) {
       return res.status(409).send('Category already exists')
     }
 
-    await new Category(newCategory).save()
+    const newCategory = await new Category({
+      name: category.name.trim(),
+      color: '#778899',
+    }).save()
 
     const categoryCount = await Category.estimatedDocumentCount()
 
