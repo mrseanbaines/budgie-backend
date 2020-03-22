@@ -4,7 +4,6 @@ import * as types from '../types'
 const transactionSchema = new mongoose.Schema(
   {
     created: Date,
-    id: String,
     amount: Number,
     notes: String,
     merchant: mongoose.Schema.Types.Mixed,
