@@ -79,12 +79,7 @@ router.post('/', async (req, res) => {
 // Update Transaction
 router.put('/:id', async (req, res) => {
   try {
-    const transaction = await Transaction.findById(req.params.id)
     const category = await Category.findById(req.body.category)
-
-    if (!transaction) {
-      return res.status(404).send('Transaction not found')
-    }
 
     if (req.body.category === undefined) {
       return res.status(400).send('Please provide a category ID')
@@ -94,7 +89,11 @@ router.put('/:id', async (req, res) => {
       return res.status(404).send('Category not found')
     }
 
-    transaction.category = req.body.category
+    const transaction = await Transaction.findByIdAndUpdate(req.params.id, { category: category.id }, { new: true })
+
+    if (!transaction) {
+      return res.status(404).send('Transaction not found')
+    }
 
     return res.status(200).send(transaction)
   } catch (err) {
