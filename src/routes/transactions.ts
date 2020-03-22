@@ -1,16 +1,13 @@
-/* eslint-disable no-console */
 import express from 'express'
 
 import Transaction from '../models/transaction-model'
 import Category from '../models/category-model'
-import * as types from '../types'
 
 const router = express.Router()
 
 // List Transactions
 router.get('/', async (req, res) => {
   try {
-    const sort = (req.query.sort || 'desc').toLowerCase()
     const { before, since } = req.query
 
     const query = Transaction.find()
@@ -23,26 +20,13 @@ router.get('/', async (req, res) => {
       query.gte('created', since)
     }
 
+    query.sort({ created: req.query.sort || 'desc' })
+
     const transactions = await query.exec()
 
-    const results = transactions.sort((a: types.Transaction, b: types.Transaction) => {
-      const dateA = Date.parse(a.created)
-      const dateB = Date.parse(b.created)
-
-      switch (sort) {
-        case 'asc': {
-          return dateA - dateB
-        }
-
-        default: {
-          return dateB - dateA
-        }
-      }
-    })
-
     return res.status(200).send({
-      items: results,
-      total: results.length,
+      items: transactions,
+      total: transactions.length,
     })
   } catch (err) {
     return res.status(500).send(err)
