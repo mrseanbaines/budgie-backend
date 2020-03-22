@@ -1,7 +1,7 @@
 import express from 'express'
-import uuidv4 from 'uuid/v4'
 
 import data from '../../data'
+import Category from '../models/category-model'
 
 const router = express.Router()
 
@@ -17,7 +17,7 @@ router.get('/', (req, res) => {
 })
 
 // Add Category
-router.post('/', (req, res) => {
+router.post('/', async (req, res) => {
   const category = req.body
 
   if (!category) {
@@ -25,19 +25,26 @@ router.post('/', (req, res) => {
   }
 
   const newCategory = {
-    id: uuidv4(),
     name: category.name.trim(),
   }
 
-  const existingCategory = data.categories.find(({ name }) => name.toUpperCase() === newCategory.name.toUpperCase())
+  const existingCategory = await Category.findOne({
+    name: { $regex: new RegExp(`^${newCategory.name}$`, 'i') },
+  })
 
   if (existingCategory) {
     return res.status(409).send('Category already exists')
   }
 
-  data.categories = [...data.categories, newCategory]
+  try {
+    await new Category(newCategory).save()
+  } catch (err) {
+    return res.status(500).send('Error creating category')
+  }
 
-  return res.status(201).send({ category: newCategory, total: data.categories.length })
+  const categoryCount = await Category.estimatedDocumentCount()
+
+  return res.status(201).send({ category: newCategory, total: categoryCount })
 })
 
 // Delete Category
