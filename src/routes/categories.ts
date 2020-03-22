@@ -54,13 +54,11 @@ router.post('/', async (req, res) => {
 // Delete Category
 router.delete('/:id', async (req, res) => {
   try {
-    const existingCategory = await Category.findById(req.params.id)
+    const existingCategory = await Category.findByIdAndDelete(req.params.id)
 
     if (!existingCategory) {
       return res.status(404).send('Category not found')
     }
-
-    existingCategory.remove()
 
     const categoryCount = await Category.estimatedDocumentCount()
 
