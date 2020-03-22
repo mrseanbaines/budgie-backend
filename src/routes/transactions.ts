@@ -1,7 +1,9 @@
+/* eslint-disable no-console */
 import express from 'express'
 
-import { Transaction } from '../types'
 import data from '../../data'
+import Transaction from '../models/transaction-model'
+import * as types from '../types'
 
 const router = express.Router()
 
@@ -13,7 +15,7 @@ router.get('/', async (req, res) => {
   const results = data.transactions
     .filter(t => (before ? t.created < before : true))
     .filter(t => (since ? t.created >= since : true))
-    .sort((a: Transaction, b: Transaction) => {
+    .sort((a: types.Transaction, b: types.Transaction) => {
       const dateA = Date.parse(a.created)
       const dateB = Date.parse(b.created)
 
@@ -32,6 +34,33 @@ router.get('/', async (req, res) => {
     items: results,
     total: results.length,
   })
+})
+
+router.post('/', async (req, res) => {
+  const transaction = req.body
+
+  if (!transaction) {
+    return res.status(422).send('No transaction provided')
+  }
+
+  try {
+    const newTransaction = await new Transaction({
+      created: transaction.created,
+      amount: transaction.amount,
+      notes: transaction.notes,
+      merchant: transaction.merchant,
+      counterparty: transaction.counterparty,
+      category: transaction.category,
+      include_in_spending: transaction.include_in_spending,
+      is_load: transaction.is_load,
+    }).save()
+
+    const transactionCount = await Transaction.estimatedDocumentCount()
+
+    return res.status(201).send({ transaction: newTransaction, total: transactionCount })
+  } catch (err) {
+    return res.status(500).send(err)
+  }
 })
 
 // Update Transaction
