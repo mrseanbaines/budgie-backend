@@ -1,23 +1,31 @@
 /* eslint-disable no-console */
 import express from 'express'
 
-import data from '../../data'
 import Transaction from '../models/transaction-model'
+import Category from '../models/category-model'
 import * as types from '../types'
 
 const router = express.Router()
 
 // List Transactions
 router.get('/', async (req, res) => {
-  const sort = (req.query.sort || 'desc').toLowerCase()
-  const { before, since } = req.query
+  try {
+    const sort = (req.query.sort || 'desc').toLowerCase()
+    const { before, since } = req.query
 
-  const transactions = await Transaction.find()
+    const query = Transaction.find()
 
-  const results = transactions
-    .filter(t => (before ? t.created < before : true))
-    .filter(t => (since ? t.created >= since : true))
-    .sort((a: types.Transaction, b: types.Transaction) => {
+    if (before) {
+      query.lt('created', before)
+    }
+
+    if (since) {
+      query.gte('created', since)
+    }
+
+    const transactions = await query.exec()
+
+    const results = transactions.sort((a: types.Transaction, b: types.Transaction) => {
       const dateA = Date.parse(a.created)
       const dateB = Date.parse(b.created)
 
@@ -32,20 +40,23 @@ router.get('/', async (req, res) => {
       }
     })
 
-  return res.status(200).send({
-    items: results,
-    total: results.length,
-  })
+    return res.status(200).send({
+      items: results,
+      total: results.length,
+    })
+  } catch (err) {
+    return res.status(500).send(err)
+  }
 })
 
 router.post('/', async (req, res) => {
-  const transaction = req.body
-
-  if (!transaction) {
-    return res.status(422).send('No transaction provided')
-  }
-
   try {
+    const transaction = req.body
+
+    if (!transaction) {
+      return res.status(422).send('No transaction provided')
+    }
+
     const newTransaction = await new Transaction({
       created: transaction.created,
       amount: transaction.amount,
@@ -66,25 +77,29 @@ router.post('/', async (req, res) => {
 })
 
 // Update Transaction
-router.put('/:id', (req, res) => {
-  const transaction = data.transactions.find(t => t.id === req.params.id)
-  const category = data.categories.find(c => c.id === req.body.category)
+router.put('/:id', async (req, res) => {
+  try {
+    const transaction = await Transaction.findById(req.params.id)
+    const category = await Category.findById(req.body.category)
 
-  if (!transaction) {
-    return res.status(404).send('Transaction not found')
+    if (!transaction) {
+      return res.status(404).send('Transaction not found')
+    }
+
+    if (req.body.category === undefined) {
+      return res.status(400).send('Please provide a category ID')
+    }
+
+    if (req.body.category !== null && !category) {
+      return res.status(404).send('Category not found')
+    }
+
+    transaction.category = req.body.category
+
+    return res.status(200).send(transaction)
+  } catch (err) {
+    return res.status(500).send(err)
   }
-
-  if (req.body.category === undefined) {
-    return res.status(400).send('Please provide a category ID')
-  }
-
-  if (req.body.category !== null && !category) {
-    return res.status(404).send('Category not found')
-  }
-
-  transaction.category = req.body.category
-
-  return res.status(200).send(transaction)
 })
 
 export default router
