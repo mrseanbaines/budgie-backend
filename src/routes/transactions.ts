@@ -47,7 +47,7 @@ router.post('/', async (req, res) => {
       notes: transaction.notes,
       merchant: transaction.merchant,
       counterparty: transaction.counterparty,
-      category: transaction.category,
+      category: null,
       include_in_spending: transaction.include_in_spending,
       is_load: transaction.is_load,
     })
