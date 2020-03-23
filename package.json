@@ -1,8 +1,7 @@
 {
   "name": "budgie-backend",
   "scripts": {
-    "start:prod": "NODE_ENV=production webpack",
-    "start:dev": "NODE_ENV=development webpack",
+    "start": "NODE_ENV=development webpack",
     "nodemon": "NODE_ENV=development nodemon build/index.js",
     "lint": "eslint '**/*.{js,ts,tsx}'",
     "lint:fix": "yarn lint --fix",
