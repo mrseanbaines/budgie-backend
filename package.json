@@ -6,7 +6,8 @@
     "lint": "eslint '**/*.{js,ts,tsx}'",
     "lint:fix": "yarn lint --fix",
     "format": "prettier --check '**/*.{js,ts,tsx,yml,yaml,json,md}'",
-    "format:fix": "prettier --write '**/*.{js,ts,tsx,yml,yaml,json,md}'"
+    "format:fix": "prettier --write '**/*.{js,ts,tsx,yml,yaml,json,md}'",
+    "postinstall": "yarn webpack"
   },
   "dependencies": {
     "axios": "^0.19.0",
