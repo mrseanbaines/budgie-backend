@@ -1,1 +1,1 @@
-web: yarn webpack
+web: yarn start:prod
