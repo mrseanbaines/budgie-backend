@@ -6,7 +6,7 @@ import * as routes from './routes'
 
 dotenv.config()
 const app = express()
-const { PORT, SITE_URL, DATABASE } = process.env
+const { PORT = 80, SITE_URL, DATABASE } = process.env
 
 const connectDatabase = async () => {
   try {
