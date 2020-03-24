@@ -1,4 +1,5 @@
 import express from 'express'
+import randomColor from 'randomcolor'
 
 import Transaction from '../models/transaction-model'
 import Category from '../models/category-model'
@@ -26,6 +27,7 @@ router.get('/', async (req, res) => {
 router.post('/', async (req, res) => {
   try {
     const category = req.body
+    const color = randomColor()
 
     if (!category) {
       return res.status(422).send('No category provided')
@@ -41,7 +43,7 @@ router.post('/', async (req, res) => {
 
     const newCategory = await Category.create({
       name: category.name.trim(),
-      color: '#778899',
+      color,
     })
 
     const categoryCount = await Category.estimatedDocumentCount()
