@@ -39,6 +39,7 @@ app.use(express.json())
 app.use('/auth', routes.auth)
 app.use('/categories', routes.categories)
 app.use('/transactions', routes.transactions)
+app.use('/foo', routes.foo)
 
 app.listen(PORT, () => {
   // eslint-disable-next-line no-console
