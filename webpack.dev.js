@@ -12,4 +12,14 @@ module.exports = merge(common, {
       onBuildEnd: ['yarn nodemon'],
     }),
   ],
+  module: {
+    rules: [
+      {
+        test: /\.ts$/,
+        enforce: 'pre',
+        exclude: /node_modules/,
+        use: ['ts-loader', 'eslint-loader'],
+      },
+    ],
+  },
 })

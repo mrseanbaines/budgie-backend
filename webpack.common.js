@@ -13,14 +13,4 @@ module.exports = {
   resolve: {
     extensions: ['.ts', '.js'],
   },
-  module: {
-    rules: [
-      {
-        test: /\.ts$/,
-        enforce: 'pre',
-        exclude: /node_modules/,
-        use: ['ts-loader', 'eslint-loader'],
-      },
-    ],
-  },
 }
