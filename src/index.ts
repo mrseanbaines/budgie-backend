@@ -4,7 +4,8 @@ import mongoose from 'mongoose'
 
 import * as routes from './routes'
 
-dotenv.config()
+dotenv.config({ path: `.env.${process.env.NODE_ENV}` })
+
 const app = express()
 const { PORT = 80, SITE_URL, MONGODB_URI } = process.env
 const port = PORT || 9000
