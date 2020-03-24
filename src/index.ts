@@ -6,11 +6,12 @@ import * as routes from './routes'
 
 dotenv.config()
 const app = express()
-const { PORT = 80, SITE_URL, DATABASE } = process.env
+const { PORT = 80, SITE_URL, MONGODB_URI } = process.env
+const port = PORT || 9000
 
 const connectDatabase = async () => {
   try {
-    await mongoose.connect(DATABASE, {
+    await mongoose.connect(MONGODB_URI, {
       useNewUrlParser: true,
       useCreateIndex: true,
       useFindAndModify: false,
@@ -41,7 +42,7 @@ app.use('/categories', routes.categories)
 app.use('/transactions', routes.transactions)
 app.use('/foo', routes.foo)
 
-app.listen(PORT, () => {
+app.listen(port, () => {
   // eslint-disable-next-line no-console
-  console.log(`🚀 Your app is available at http://localhost:${PORT}`)
+  console.log(`🚀 Your app is available at http://localhost:${port}`)
 })
