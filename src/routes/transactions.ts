@@ -41,6 +41,8 @@ router.post('/', async (req, res) => {
       return res.status(422).send('No transaction provided')
     }
 
+    console.log('MONZO TRANSACTION', req.body)
+
     if (type === 'transaction.created') {
       const newTransaction = await Transaction.create({
         created: data.created,
