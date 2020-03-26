@@ -4,13 +4,14 @@ import mongoose from 'mongoose'
 
 import * as routes from './routes'
 
-dotenv.config()
+dotenv.config({ path: `.env.${process.env.NODE_ENV}` })
+
 const app = express()
-const { PORT, SITE_URL, DATABASE } = process.env
+const { PORT = 80, SITE_URL, MONGODB_URI } = process.env
 
 const connectDatabase = async () => {
   try {
-    await mongoose.connect(DATABASE, {
+    await mongoose.connect(MONGODB_URI, {
       useNewUrlParser: true,
       useCreateIndex: true,
       useFindAndModify: false,

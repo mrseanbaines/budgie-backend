@@ -35,26 +35,33 @@ router.get('/', async (req, res) => {
 
 router.post('/', async (req, res) => {
   try {
-    const transaction = req.body
+    const { type, data } = req.body
 
-    if (!transaction) {
+    if (!data) {
       return res.status(422).send('No transaction provided')
     }
 
-    const newTransaction = await Transaction.create({
-      created: transaction.created,
-      amount: transaction.amount,
-      notes: transaction.notes,
-      merchant: transaction.merchant,
-      counterparty: transaction.counterparty,
-      category: null,
-      include_in_spending: transaction.include_in_spending,
-      is_load: transaction.is_load,
-    })
+    // eslint-disable-next-line no-console
+    console.log(req.body)
 
-    const transactionCount = await Transaction.estimatedDocumentCount()
+    if (type === 'transaction.created') {
+      const newTransaction = await Transaction.create({
+        created: data.created,
+        amount: data.amount,
+        notes: data.notes,
+        merchant: data.merchant,
+        counterparty: data.counterparty,
+        category: null,
+        include_in_spending: data.include_in_spending,
+        is_load: data.is_load,
+      })
 
-    return res.status(201).send({ transaction: newTransaction, total: transactionCount })
+      const transactionCount = await Transaction.estimatedDocumentCount()
+
+      return res.status(201).send({ transaction: newTransaction, total: transactionCount })
+    }
+
+    return res.end()
   } catch (err) {
     return res.status(500).send(err)
   }
