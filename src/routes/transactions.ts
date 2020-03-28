@@ -1,7 +1,7 @@
 import express from 'express'
 
-import Transaction from '../models/transaction-model'
-import Category from '../models/category-model'
+import Transaction from '../models/transaction'
+import Category from '../models/category'
 
 const router = express.Router()
 
