@@ -1,6 +1,6 @@
+/* eslint-disable camelcase */
 import mongoose from 'mongoose'
 
-/* eslint-disable camelcase */
 export interface Category extends mongoose.Document {
   id: string
   name: string
