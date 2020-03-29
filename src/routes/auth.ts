@@ -3,6 +3,7 @@ import bcrypt from 'bcryptjs'
 import jwt from 'jsonwebtoken'
 
 import User from '../models/user'
+import auth from '../middleware/auth'
 
 const router = express.Router()
 const { JWT_SECRET } = process.env
@@ -37,6 +38,21 @@ router.post('/', async (req, res) => {
         name: user.name,
         email: user.email,
       },
+    })
+  } catch (err) {
+    return res.status(500).send(err)
+  }
+})
+
+// Get User
+router.get('/', auth, async (req, res) => {
+  try {
+    const user = await User.findById(res.locals.user.id)
+
+    return res.json({
+      id: user.id,
+      name: user.name,
+      email: user.email,
     })
   } catch (err) {
     return res.status(500).send(err)

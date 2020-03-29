@@ -2,11 +2,12 @@ import express from 'express'
 
 import Transaction from '../models/transaction'
 import Category from '../models/category'
+import auth from '../middleware/auth'
 
 const router = express.Router()
 
 // List Categories
-router.get('/', async (req, res) => {
+router.get('/', auth, async (req, res) => {
   try {
     const limit = parseInt(req.query.limit, 10) || 25
     const offset = parseInt(req.query.offset, 10) || 0
@@ -23,7 +24,7 @@ router.get('/', async (req, res) => {
 })
 
 // Add Category
-router.post('/', async (req, res) => {
+router.post('/', auth, async (req, res) => {
   try {
     const category = req.body
 
@@ -53,7 +54,7 @@ router.post('/', async (req, res) => {
 })
 
 // Delete Category
-router.delete('/:id', async (req, res) => {
+router.delete('/:id', auth, async (req, res) => {
   try {
     const existingCategory = await Category.findByIdAndDelete(req.params.id)
 

@@ -2,11 +2,12 @@ import express from 'express'
 
 import Transaction from '../models/transaction'
 import Category from '../models/category'
+import auth from '../middleware/auth'
 
 const router = express.Router()
 
 // List Transactions
-router.get('/', async (req, res) => {
+router.get('/', auth, async (req, res) => {
   try {
     const { before, since } = req.query
 
@@ -33,7 +34,8 @@ router.get('/', async (req, res) => {
   }
 })
 
-router.post('/', async (req, res) => {
+// Add Transaction
+router.post('/', auth, async (req, res) => {
   try {
     const { type, data } = req.body
 
@@ -68,7 +70,7 @@ router.post('/', async (req, res) => {
 })
 
 // Update Transaction
-router.put('/:id', async (req, res) => {
+router.put('/:id', auth, async (req, res) => {
   try {
     const category = await Category.findById(req.body.category)
 
