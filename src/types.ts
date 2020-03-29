@@ -16,13 +16,21 @@ export interface Counterparty {
 }
 
 export interface Transaction extends mongoose.Document {
-  created: string
   id: string
+  created: Date
   amount: number
   notes: string
-  merchant: string | Merchant
+  merchant: Merchant | null
   counterparty: Counterparty
-  category: string
+  category: string | null
   include_in_spending: boolean
   is_load: boolean
+}
+
+export interface User extends mongoose.Document {
+  id: string
+  created: Date
+  name: string
+  email: string
+  password: string
 }

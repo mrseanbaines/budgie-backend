@@ -1,9 +1,9 @@
 {
   "name": "budgie-backend",
   "scripts": {
-    "start": "NODE_ENV=development webpack --config webpack.dev.js",
-    "nodemon": "NODE_ENV=development nodemon build/index.js",
-    "build": "yarn webpack --config webpack.prod.js",
+    "start": "webpack --config webpack.dev.js",
+    "nodemon": "nodemon -r dotenv/config build/index.js",
+    "build": "webpack --config webpack.prod.js",
     "lint": "eslint '**/*.{js,ts,tsx}'",
     "lint:fix": "yarn lint --fix",
     "format": "prettier --check .",
@@ -11,14 +11,18 @@
   },
   "dependencies": {
     "axios": "^0.19.0",
+    "bcryptjs": "^2.4.3",
     "dotenv-safe": "^8.1.0",
     "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.9.5",
     "uuid": "^3.3.3"
   },
   "devDependencies": {
     "@mrseanbaines/prettier-config": "^1.0.1",
+    "@types/bcryptjs": "^2.4.2",
     "@types/express": "^4.17.2",
+    "@types/jsonwebtoken": "^8.3.8",
     "@types/mongoose": "^5.7.7",
     "@types/uuid": "^3.4.6",
     "@typescript-eslint/eslint-plugin": "^2.9.0",

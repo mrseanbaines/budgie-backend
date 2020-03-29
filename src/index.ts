@@ -1,10 +1,7 @@
-import dotenv from 'dotenv-safe'
 import express from 'express'
 import mongoose from 'mongoose'
 
 import * as routes from './routes'
-
-dotenv.config({ path: `.env.${process.env.NODE_ENV}` })
 
 const app = express()
 const { PORT = 80, SITE_URL, MONGODB_URI } = process.env
@@ -39,6 +36,7 @@ app.use(express.json())
 app.use('/auth', routes.auth)
 app.use('/categories', routes.categories)
 app.use('/transactions', routes.transactions)
+app.use('/users', routes.users)
 
 app.listen(PORT, () => {
   // eslint-disable-next-line no-console
