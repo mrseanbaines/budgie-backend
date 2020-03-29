@@ -18,6 +18,11 @@
     esutils "^2.0.2"
     js-tokens "^4.0.0"
 
+"@mrseanbaines/prettier-config@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@mrseanbaines/prettier-config/-/prettier-config-1.0.1.tgz#206839a8cccab967ce459378a5b36d08de1939cd"
+  integrity sha512-WPQ6FxT24aDocWo3++VfZ9N9sBoJwxl7Ia+5pN+cSOHh3AgJ8qGbZhnKIbTVhQUpql3rC4w62Y3A4Nh+UuNB8Q==
+
 "@types/body-parser@*":
   version "1.17.1"
   resolved "https://registry.yarnpkg.com/@types/body-parser/-/body-parser-1.17.1.tgz#18fcf61768fb5c30ccc508c21d6fd2e8b3bf7897"

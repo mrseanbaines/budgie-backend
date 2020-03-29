@@ -17,6 +17,7 @@
     "uuid": "^3.3.3"
   },
   "devDependencies": {
+    "@mrseanbaines/prettier-config": "^1.0.1",
     "@types/express": "^4.17.2",
     "@types/mongoose": "^5.7.7",
     "@types/uuid": "^3.4.6",
@@ -42,5 +43,6 @@
   "repository": "git@github.com:mrseanbaines/budgie-backend.git",
   "author": "Sean Baines <mrseanbaines@gmail.com>",
   "license": "MIT",
-  "private": true
+  "private": true,
+  "prettier": "@mrseanbaines/prettier-config"
 }
