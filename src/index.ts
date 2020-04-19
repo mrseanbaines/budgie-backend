@@ -12,6 +12,7 @@ const connectDatabase = async () => {
       useNewUrlParser: true,
       useCreateIndex: true,
       useUnifiedTopology: true,
+      useFindAndModify: false,
     })
 
     // eslint-disable-next-line no-console
