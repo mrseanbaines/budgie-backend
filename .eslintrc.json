@@ -3,7 +3,7 @@
     "es6": true,
     "node": true
   },
-  "extends": ["airbnb-base", "prettier"],
+  "extends": ["airbnb-base", "plugin:prettier/recommended"],
   "globals": {
     "Atomics": "readonly",
     "SharedArrayBuffer": "readonly"
@@ -23,8 +23,7 @@
   },
   "rules": {
     "no-console": ["error", { "allow": ["error"] }],
-    "object-curly-newline": "off",
-    "arrow-parens": ["error", "as-needed"]
+    "object-curly-newline": "off"
   },
   "overrides": [
     {
