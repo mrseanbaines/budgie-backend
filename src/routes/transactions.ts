@@ -24,11 +24,22 @@ router.get('/', auth, async (req, res) => {
     query.sort({ created: req.query.sort || 'desc' })
 
     const transactions = await query.exec()
-
-    return res.status(200).send({
-      items: transactions,
+    const response = {
+      items: transactions.map(t => ({
+        id: t.id,
+        created: t.created,
+        amount: t.amount,
+        notes: t.notes,
+        merchant: t.merchant,
+        counterparty: t.counterparty,
+        category: t.category,
+        include_in_spending: t.include_in_spending,
+        is_load: t.is_load,
+      })),
       total: transactions.length,
-    })
+    }
+
+    return res.status(200).send(response)
   } catch (err) {
     return res.status(500).send(err)
   }
@@ -59,8 +70,22 @@ router.post('/', auth, async (req, res) => {
       })
 
       const transactionCount = await Transaction.estimatedDocumentCount()
+      const response = {
+        transaction: {
+          id: newTransaction.id,
+          created: newTransaction.created,
+          amount: newTransaction.amount,
+          notes: newTransaction.notes,
+          merchant: newTransaction.merchant,
+          counterparty: newTransaction.counterparty,
+          category: newTransaction.category,
+          include_in_spending: newTransaction.include_in_spending,
+          is_load: newTransaction.is_load,
+        },
+        total: transactionCount,
+      }
 
-      return res.status(201).send({ transaction: newTransaction, total: transactionCount })
+      return res.status(201).send(response)
     }
 
     return res.end()
@@ -92,7 +117,19 @@ router.put('/:id', auth, async (req, res) => {
       return res.status(404).send('Transaction not found')
     }
 
-    return res.status(200).send(transaction)
+    const response = {
+      id: transaction.id,
+      created: transaction.created,
+      amount: transaction.amount,
+      notes: transaction.notes,
+      merchant: transaction.merchant,
+      counterparty: transaction.counterparty,
+      category: transaction.category,
+      include_in_spending: transaction.include_in_spending,
+      is_load: transaction.is_load,
+    }
+
+    return res.status(200).send(response)
   } catch (err) {
     return res.status(500).send(err)
   }
