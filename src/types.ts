@@ -17,7 +17,7 @@ export interface Counterparty {
 
 export interface Transaction extends mongoose.Document {
   id: string
-  created: Date
+  created: string
   amount: number
   notes: string
   merchant: Merchant | null
@@ -29,7 +29,7 @@ export interface Transaction extends mongoose.Document {
 
 export interface User extends mongoose.Document {
   id: string
-  created: Date
+  created: string
   name: string
   email: string
   password: string

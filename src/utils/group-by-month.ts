@@ -2,7 +2,7 @@ import { isSameMonth } from 'date-fns'
 import { groupWith } from 'ramda'
 
 interface Item {
-  created: Date
+  created: string
 }
 
 const groupByMonth = <T extends Item>(items: T[]) =>
