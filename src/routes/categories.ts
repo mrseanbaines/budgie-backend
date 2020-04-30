@@ -2,12 +2,12 @@ import express from 'express'
 
 import Transaction from '../models/transaction'
 import Category from '../models/category'
-import auth from '../middleware/auth'
+// import auth from '../middleware/auth'
 
 const router = express.Router()
 
 // List Categories
-router.get('/', auth, async (req, res) => {
+router.get('/', async (req, res) => {
   try {
     const limit = parseInt(req.query.limit, 10) || 25
     const offset = parseInt(req.query.offset, 10) || 0
@@ -25,7 +25,7 @@ router.get('/', auth, async (req, res) => {
 })
 
 // Add Category
-router.post('/', auth, async (req, res) => {
+router.post('/', async (req, res) => {
   try {
     const category = req.body
 
@@ -62,7 +62,7 @@ router.post('/', auth, async (req, res) => {
 })
 
 // Edit Category
-router.put('/:id', auth, async (req, res) => {
+router.put('/:id', async (req, res) => {
   try {
     const category = await Category.findByIdAndUpdate(req.params.id, req.body, { new: true })
 
