@@ -51,7 +51,7 @@ router.get('/', async (req, res) => {
 // List Transactions Summaries
 router.get('/summary', async (req, res) => {
   try {
-    const transactions = await Transaction.find(null, 'created amount')
+    const transactions = await Transaction.find({ amount: { $lt: 0 } }, 'created amount')
 
     const summary = groupByMonth(transactions).map(monthTransactions => ({
       date: startOfMonth(new Date(monthTransactions[0].created)),
