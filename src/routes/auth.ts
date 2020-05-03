@@ -13,23 +13,45 @@ router.post('/', async (req, res) => {
   try {
     const { email, password } = req.body
 
-    if (!email || !password) {
-      return res.status(400).send('One or more required fields missing')
+    if (!email) {
+      return res.status(400).send({
+        token: null,
+        user: null,
+        error: 'Please enter an email address',
+      })
+    }
+
+    if (!password) {
+      return res.status(400).send({
+        token: null,
+        user: null,
+        error: 'Please enter a password',
+      })
     }
 
     const user = await User.findOne({ email })
 
     if (!user) {
-      return res.status(404).send('User not found')
+      return res.status(404).send({
+        token: null,
+        user: null,
+        error: 'No user with this email address was found',
+      })
     }
 
     const match = await bcrypt.compare(password, user.password)
 
     if (!match) {
-      return res.status(400).send('Invalid password')
+      return res.status(400).send({
+        token: null,
+        user: null,
+        error: 'Invalid password',
+      })
     }
 
     const token = jwt.sign({ id: user.id }, JWT_SECRET, { expiresIn: 3600 })
+
+    res.cookie('access_token', token)
 
     return res.send({
       token,
@@ -38,6 +60,7 @@ router.post('/', async (req, res) => {
         name: user.name,
         email: user.email,
       },
+      error: null,
     })
   } catch (err) {
     return res.status(500).send(err)
