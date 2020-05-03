@@ -3,10 +3,10 @@ import { startOfMonth } from 'date-fns'
 import { sum } from 'ramda'
 
 import Transaction from '../models/transaction'
-import { Transaction as TransactionType } from '../types'
 import Category from '../models/category'
+import { Transaction as TransactionType } from '../types'
 import { groupByMonth } from '../utils'
-// import auth from '../middleware/auth'
+import auth from '../middleware/auth'
 
 const router = express.Router()
 
@@ -28,7 +28,7 @@ const getTransactionResponse = (transaction: TransactionType) => ({
 })
 
 // List Transactions
-router.get('/', async (req, res) => {
+router.get('/', auth, async (req, res) => {
   try {
     const { before, since } = req.query
 
@@ -57,7 +57,7 @@ router.get('/', async (req, res) => {
 })
 
 // List Transactions Summaries
-router.get('/summary', async (req, res) => {
+router.get('/summary', auth, async (req, res) => {
   try {
     const transactions = await Transaction.find({ amount: { $lt: 0 } }, 'created amount')
 
@@ -111,7 +111,7 @@ router.post('/', async (req, res) => {
 })
 
 // Dump Transactions
-router.post('/dump', async (req, res) => {
+router.post('/dump', auth, async (req, res) => {
   try {
     const transactions = req.body
 
@@ -134,7 +134,7 @@ router.post('/dump', async (req, res) => {
 })
 
 // Update Transaction
-router.put('/:id', async (req, res) => {
+router.put('/:id', auth, async (req, res) => {
   try {
     const category = await Category.findById(req.body.category)
 
