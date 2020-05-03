@@ -6,13 +6,17 @@ const transactionSchema = new mongoose.Schema(
     created: Date,
     amount: Number,
     notes: String,
-    merchant: mongoose.Schema.Types.Mixed,
+    merchant: {
+      name: String,
+      logo: String,
+    },
     counterparty: {
       name: String,
     },
     category: String,
     include_in_spending: Boolean,
     is_load: Boolean,
+    monzo_id: String,
   },
   { minimize: false },
 )

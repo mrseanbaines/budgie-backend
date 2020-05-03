@@ -3,11 +3,29 @@ import { startOfMonth } from 'date-fns'
 import { sum } from 'ramda'
 
 import Transaction from '../models/transaction'
+import { Transaction as TransactionType } from '../types'
 import Category from '../models/category'
 import { groupByMonth } from '../utils'
 // import auth from '../middleware/auth'
 
 const router = express.Router()
+
+const getTransactionResponse = (transaction: TransactionType) => ({
+  id: transaction.id,
+  created: transaction.created,
+  amount: transaction.amount,
+  notes: transaction.notes,
+  merchant: {
+    name: transaction.merchant.name,
+    logo: transaction.merchant.logo,
+  },
+  counterparty: {
+    name: transaction.counterparty.name,
+  },
+  category: transaction.category,
+  include_in_spending: transaction.include_in_spending,
+  is_load: transaction.is_load,
+})
 
 // List Transactions
 router.get('/', async (req, res) => {
@@ -28,17 +46,7 @@ router.get('/', async (req, res) => {
 
     const transactions = await query.exec()
     const response = {
-      items: transactions.map(t => ({
-        id: t.id,
-        created: t.created,
-        amount: t.amount,
-        notes: t.notes,
-        merchant: t.merchant,
-        counterparty: t.counterparty,
-        category: t.category,
-        include_in_spending: t.include_in_spending,
-        is_load: t.is_load,
-      })),
+      items: transactions.map(getTransactionResponse),
       total: transactions.length,
     }
 
@@ -73,41 +81,53 @@ router.post('/', async (req, res) => {
       return res.status(422).send('No transaction provided')
     }
 
+    const existingTransaction = await Transaction.findOne({
+      monzo_id: data.id,
+    })
+
+    if (existingTransaction) {
+      return res.status(409).send('Transaction already exists')
+    }
+
     // eslint-disable-next-line no-console
     console.log(req.body)
 
     if (type === 'transaction.created') {
-      const newTransaction = await Transaction.create({
-        created: data.created,
-        amount: data.amount,
-        notes: data.notes,
-        merchant: data.merchant,
-        counterparty: data.counterparty,
-        category: null,
-        include_in_spending: data.include_in_spending,
-        is_load: data.is_load,
-      })
+      const newTransaction = await Transaction.create({ ...data, category: null, monzo_id: data.id })
 
       const transactionCount = await Transaction.estimatedDocumentCount()
       const response = {
-        transaction: {
-          id: newTransaction.id,
-          created: newTransaction.created,
-          amount: newTransaction.amount,
-          notes: newTransaction.notes,
-          merchant: newTransaction.merchant,
-          counterparty: newTransaction.counterparty,
-          category: newTransaction.category,
-          include_in_spending: newTransaction.include_in_spending,
-          is_load: newTransaction.is_load,
-        },
+        transaction: getTransactionResponse(newTransaction),
         total: transactionCount,
       }
 
       return res.status(201).send(response)
     }
 
-    return res.end()
+    return res.send('Success')
+  } catch (err) {
+    return res.status(500).send(err)
+  }
+})
+
+// Dump Transactions
+router.post('/dump', async (req, res) => {
+  try {
+    const transactions = req.body
+
+    if (!transactions) {
+      return res.status(422).send('No transactions provided')
+    }
+
+    const existingTransactions = await Transaction.find()
+
+    await Transaction.create(
+      transactions
+        .filter((t: TransactionType) => !existingTransactions.some(eT => eT.monzo_id === t.id))
+        .map(t => ({ ...t, category: null, monzo_id: t.id })),
+    )
+
+    return res.send('Dump successful ✅')
   } catch (err) {
     return res.status(500).send(err)
   }
@@ -136,19 +156,7 @@ router.put('/:id', async (req, res) => {
       return res.status(404).send('Transaction not found')
     }
 
-    const response = {
-      id: transaction.id,
-      created: transaction.created,
-      amount: transaction.amount,
-      notes: transaction.notes,
-      merchant: transaction.merchant,
-      counterparty: transaction.counterparty,
-      category: transaction.category,
-      include_in_spending: transaction.include_in_spending,
-      is_load: transaction.is_load,
-    }
-
-    return res.status(200).send(response)
+    return res.status(200).send(getTransactionResponse(transaction))
   } catch (err) {
     return res.status(500).send(err)
   }

@@ -9,15 +9,16 @@ export interface Category extends mongoose.Document {
 
 export interface Merchant {
   name: string
+  logo: string
 }
 
 export interface Counterparty {
-  name: string
+  name?: string
 }
 
 export interface Transaction extends mongoose.Document {
-  id: string
   created: string
+  id: string
   amount: number
   notes: string
   merchant: Merchant | null
@@ -25,6 +26,7 @@ export interface Transaction extends mongoose.Document {
   category: string | null
   include_in_spending: boolean
   is_load: boolean
+  monzo_id: string
 }
 
 export interface User extends mongoose.Document {
