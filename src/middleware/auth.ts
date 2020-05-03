@@ -17,6 +17,10 @@ const auth = (req: Request, res: Response, next: NextFunction) => {
 
     return next()
   } catch (err) {
+    if (err.name === 'TokenExpiredError') {
+      return res.status(401).send('Auth token expired')
+    }
+
     return res.status(500).send(err)
   }
 }
