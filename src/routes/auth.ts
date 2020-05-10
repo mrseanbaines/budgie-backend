@@ -14,44 +14,26 @@ router.post('/', async (req, res) => {
     const { email, password } = req.body
 
     if (!email) {
-      return res.status(400).send({
-        token: null,
-        user: null,
-        error: 'Please enter an email address',
-      })
+      return res.status(400).send({ message: 'Please enter an email address' })
     }
 
     if (!password) {
-      return res.status(400).send({
-        token: null,
-        user: null,
-        error: 'Please enter a password',
-      })
+      return res.status(400).send({ message: 'Please enter a password' })
     }
 
     const user = await User.findOne({ email })
 
     if (!user) {
-      return res.status(404).send({
-        token: null,
-        user: null,
-        error: 'No user with this email address was found',
-      })
+      return res.status(404).send({ message: 'No user with this email address was found' })
     }
 
     const match = await bcrypt.compare(password, user.password)
 
     if (!match) {
-      return res.status(400).send({
-        token: null,
-        user: null,
-        error: 'Invalid password',
-      })
+      return res.status(400).send({ message: 'Invalid password' })
     }
 
     const token = jwt.sign({ id: user.id }, JWT_SECRET, { expiresIn: 3600 })
-
-    res.cookie('access_token', token)
 
     return res.send({
       token,
@@ -60,7 +42,6 @@ router.post('/', async (req, res) => {
         name: user.name,
         email: user.email,
       },
-      error: null,
     })
   } catch (err) {
     return res.status(500).send(err)
@@ -72,7 +53,7 @@ router.get('/', auth, async (req, res) => {
   try {
     const user = await User.findById(res.locals.user.id)
 
-    return res.json({
+    return res.send({
       id: user.id,
       name: user.name,
       email: user.email,

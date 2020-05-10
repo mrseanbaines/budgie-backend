@@ -5,10 +5,12 @@ const { JWT_SECRET } = process.env
 
 const auth = (req: Request, res: Response, next: NextFunction) => {
   try {
-    const token = req.cookies.access_token
+    const token = req.headers.authorization
 
     if (!token) {
-      return res.status(401).json('No authorisation token provided')
+      return res.status(401).send({
+        message: 'No authorisation token provided',
+      })
     }
 
     const decoded = jwt.verify(token, JWT_SECRET)
