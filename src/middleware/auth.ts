@@ -5,14 +5,21 @@ const { JWT_SECRET } = process.env
 
 const auth = (req: Request, res: Response, next: NextFunction) => {
   try {
-    const token = req.headers.authorization
+    const authHeader = req.headers.authorization
 
-    if (!token) {
+    if (!authHeader) {
       return res.status(401).send({
         message: 'No authorisation token provided',
       })
     }
 
+    if (!authHeader.startsWith('Bearer ')) {
+      return res.status(401).send({
+        message: 'Invalid authorisation token format',
+      })
+    }
+
+    const token = authHeader.substring(7)
     const decoded = jwt.verify(token, JWT_SECRET)
 
     res.locals.user = decoded

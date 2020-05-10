@@ -25,7 +25,7 @@ router.post('/', async (req, res) => {
     const salt = await bcrypt.genSalt()
     const hashedPassword = await bcrypt.hash(password, salt)
     const user = await User.create({ name, email, password: hashedPassword })
-    const token = jwt.sign({ id: user.id }, JWT_SECRET, { expiresIn: 3600 })
+    const token = jwt.sign({ id: user.id }, JWT_SECRET, { expiresIn: 86400 })
 
     return res.status(200).send({
       token,

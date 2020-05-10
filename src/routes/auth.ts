@@ -33,7 +33,7 @@ router.post('/', async (req, res) => {
       return res.status(400).send({ message: 'Invalid password' })
     }
 
-    const token = jwt.sign({ id: user.id }, JWT_SECRET, { expiresIn: 3600 })
+    const token = jwt.sign({ id: user.id }, JWT_SECRET, { expiresIn: 86400 })
 
     return res.send({
       token,
